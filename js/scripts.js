@@ -13,7 +13,7 @@ TicketPrice.prototype.addTicket = function(ticket) {
 
 
 function Ticket(movie, time, age, numberOfTickets) {
-  // this.age = age;
+  this.age = age;
   this.movie = movie;
   this.time = time;
   this.numberOfTickets = numberOfTickets;
@@ -29,11 +29,21 @@ function Ticket(movie, time, age, numberOfTickets) {
 $(document).ready(function() {
   $("#inputForm").submit(function(event) {
     event.preventDefault();
-    let inputMovie = $("input:radio[name=movie]:checked").val();
-    let inputTime = $("#time").val();
-    let inputAge = $("#age").val();
-    let inputNumberOfTickets = $("#ticketNumber").val();
-    ticket = new Ticket(inputMovie, inputTime, inputAge, inputNumberOfTickets)
-    ticketPrice = new TicketPrice.addTicket(ticket)
+    ticket = new Ticket($("input:radio[name=movie]:checked").val(), $("#time").val(), $("#age").val(), $("#ticketNumber").val())
+    ticketPrice.addTicket(ticket)
+    console.log(typeof(inputAge));
   });
 });
+
+
+
+
+
+
+
+
+// let inputMovie = $("input:radio[name=movie]:checked").val();
+// let inputTime = $("#time").val();
+// let inputAge = $("#age").val();
+// let inputNumberOfTickets = $("#ticketNumber").val();
+// ticket = new Ticket(inputMovie, inputTime, inputAge, inputNumberOfTickets)
