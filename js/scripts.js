@@ -1,6 +1,14 @@
 //Business Logic
+function TicketPrice() {
+  this.tickets = [];
+}
 
-
+function Ticket(movie, time, age, numberOfTickets) {
+  this.age = age;
+  this.movie = movie;
+  this.time = time;
+  this.numberOfTickets = numberOfTickets;
+}
 
 
 

@@ -11,27 +11,59 @@
   <div class="container">
     <p id="headerText">Buy Movie Tickets Here!</p>
     <form id="inputForm">
-      <label>
-        <input type="radio" name="movie" value="movie1">
-        The great "movie 1"
-      </label>
-      <label>
-        <input type="radio" name="movie" value="movie2">
-        The great "movie 2"
-      </label>
-      <label>
-        <input type="radio" name="movie" value="movie3">
-        The great "movie 3"
-      </label>
-      <label>
-        <input type="radio" name="movie" value="movie4">
-        The great "movie 4"
-      </label>
-      <label>
-        <input type="radio" name="movie" value="movie5">
-        The great "movie 5"
-      </label>
+      <div>
+        <label>
+          <input type="radio" name="movie" value="movie1">
+          The great "movie 1"
+        </label>
+        <label>
+          <input type="radio" name="movie" value="movie2">
+          The great "movie 2"
+        </label>
+        <label>
+          <input type="radio" name="movie" value="movie3">
+          The great "movie 3"
+        </label>
+        <label>
+          <input type="radio" name="movie" value="movie4">
+          The great "movie 4"
+        </label>
+        <label>
+          <input type="radio" name="movie" value="movie5">
+          The great "movie 5"
+        </label>
+      </div>
+      <div>
+        <select class="form-control">
+          <option value="1">11:00am</option>
+          <option value="2">12:00pm</option>
+          <option value="3">1:00pm</option>
+          <option value="4">2:00pm</option>
+          <option value="5">3:00pm</option>
+          <option value="6">4:00pm</option>
+          <option value="7">5:00pm</option>
+          <option value="8">6:00pm</option>
+          <option value="9">7:00pm</option>
+          <option value="10">8:00pm</option>
+          <option value="11">9:00pm</option>
+          <option value="12">10:00pm</option>
+          <option value="13">11:00pm</option>
+          <option value="14">12:00am</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="age">Date of birth</label>
+        <input id="age" class="form-control" type="date">
+      </div>
+      <div class="form-group">
+        <label for="ticketNumber">Number of Tickets</label>
+        <input id="ticketNumber" class="form-control" type="number">
+      </div>
+      <button type="submit" class="btn">Show me the Price!</button>
+      <button type="reset" class="btn">Reset</button>
     </form>
+    <div class="ticket-price">
+    </div>
   </div>
 </body>
 </html>
