@@ -65,49 +65,33 @@ function movieValue() {
     return movie5
   } else alert ("You did not select a movie.")
 }
-// if (ticket.movie == "movie1") 
-// {ticketPrice.addTicket(movie1);}
 
-// const movie2 = {
-  //   name: "What About Bob", 
-  //   price: basePrice,
-  //   rating: "R"
-  // };
-  // const movie3 = {
-    //   name: "The Sandlot", 
-    //   price: basePrice,
-    //   rating: "R"
-    // };
-    
+function timeValue() {
+  if (parseInt($("#time").val()) <= 3) {
+    return .75
+  }
+  else return 1
+}
+
+
+
+function ageValue() {
+  if (parseInt($("#age").val()) <= 60) {
+    return 1
+  }
+  else return .75
+}
+
     //User Interface Logic
-    $(document).ready(function() {
-      $("#inputForm").submit(function(event) {
-        event.preventDefault();
-        ticket = new Ticket(movieValue(), $("#time").val(), $("#age").val(), $("#ticketNumber").val())
-        ticketPrice.addTicket(ticket)
-      });
-      
-    });
-    
-    
-    
-    
-    
-    
-    
-    
-    // let inputMovie = $("input:radio[name=movie]:checked").val();
-    // let inputTime = $("#time").val();
-    // let inputAge = $("#age").val();
-    // let inputNumberOfTickets = $("#ticketNumber").val();
-    // ticket = new Ticket(inputMovie, inputTime, inputAge, inputNumberOfTickets)
-    
-    
-    
-    // function Movie()
-    
-    // function Movie(name, price, rating) {
-      //   this.name = name;
-      //   this.price = price;
-      //   this.rating = rating;
-      // }
+$(document).ready(function() {
+  $("#inputForm").submit(function(event) {
+    event.preventDefault();
+    ticket = new Ticket(movieValue(), timeValue(), ageValue(), parseInt($("#ticketNumber").val()));
+    ticketPrice.addTicket(ticket);
+    outputPrice = ticketPrice.tickets[0].movie.price * ticketPrice.tickets[0].age * ticketPrice.tickets[0].numberOfTickets * ticketPrice.tickets[0].time
+    $(".ticket-price").text(outputPrice);
+
+  });
+  
+});
+
