@@ -1,10 +1,14 @@
-# **PROJECT NAME HERE**
+# **Movie Ticket Price Calculator**
 
 ## **Project Description**
+####This project was made for Epicodus bootcamp coursework and is not in a complete state.
+ This webpage calculates the price of movie tickets
 
 ## **Required for Use**
 
 ## **Installation Instructions**
+1. Download zip file from Github.
+2. Navigate to the root directory and open the index.html file in your internet browser.
 
 ## **Usage / Examples**
 
